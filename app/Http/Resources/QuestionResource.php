@@ -26,6 +26,7 @@ class QuestionResource extends JsonResource
             'is_require'        => $this->is_require,
             'form_id'           => $this->form->id,
             'form_questions_id' => $this->formQuestions->id,
+            'answers'           => !empty($this->formQuestions->answer) ? $this->formQuestions->answer->value : '',
         ];
     }
 }

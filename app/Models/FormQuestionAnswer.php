@@ -17,4 +17,12 @@ class FormQuestionAnswer extends Model
      * @var string[]
      */
     protected $fillable = ['form_questions_id', 'value'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function formQuestion()
+    {
+        return $this->hasOne(FormQuestion::class, 'id', 'form_questions_id');
+    }
 }

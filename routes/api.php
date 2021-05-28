@@ -49,6 +49,7 @@ Route::group([
         Route::get('forms/{id}/edit', 'FormController@edit');
         Route::delete('forms/{id}', 'FormController@destroy');
         Route::get('form/{slug}', 'FormController@showBySlug');
+        Route::get('forms/{id}/results', 'FormResultController@showResults');
 
         //questions routes
         Route::get('questions/{id}', 'QuestionController@show');

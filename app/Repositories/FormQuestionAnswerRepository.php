@@ -29,6 +29,23 @@ class FormQuestionAnswerRepository
     }
 
     /**
+     * @return FormQuestionAnswer[]|\Illuminate\Database\Eloquent\Collection
+     */
+    public function getAll()
+    {
+        return $this->model::all();
+    }
+
+    /**
+     * @param $id
+     * @return FormQuestionAnswer|null
+     */
+    public function getById($id): ?FormQuestionAnswer
+    {
+        return $this->model::findOrFail($id);
+    }
+
+    /**
      * @param $datas
      * @return bool
      */
